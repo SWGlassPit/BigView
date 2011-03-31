@@ -7,6 +7,7 @@
 #include <GLX.h>
 #include <Draggers/SphereDragger.h>
 #include <glxTrackball.h>
+#include <stdio.h>
 #include <values.h> // for MAXFLOAT
 
 //#define DEBUG 1

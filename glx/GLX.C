@@ -13,7 +13,7 @@
 #include <Xm/Xm.h>
 #include <Xm/MwmUtil.h>
 #include <Xm/Protocols.h>
-#include <GL/GLwDrawA.h>
+//#include <GL/GLwDrawA.h>
 #include <assert.h>
 #include <stdlib.h>
 #include <unistd.h>

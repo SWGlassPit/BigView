@@ -11,8 +11,11 @@ include Global.defs
 
 LOCAL_FLAGS = -D_FILE_OFFSET_BITS=64 -Iglx -IbigFile -Ippm
 
-LINK  = -Lglx -lGlx -Lppm -lPPM -LbigFile -lBF \
-	-lGLw -lGL -lXm -lXt -lXext -lX11 \
+#LINK  = -Lglx -lGlx -Lppm -lPPM -LbigFile -lBF \
+#	-lGLw -lGL -lXm -lXt -lXext -lX11 \
+#	-lpthread -lm $(GLBL_LINK)
+LINK  = -Lglx -Lppm -lPPM -LbigFile  \
+	-lGL -lXm -lXt -lXext -lX11 \
 	-lpthread -lm $(GLBL_LINK)
 
 OBJS = glerr.o PageManager.o PageReader.o threadedQueue.o Net.o
@@ -24,7 +27,7 @@ default: sublibs $(OBJS)
 sublibs:
 	cd bigFile; $(MAKE) 
 	cd ppm; $(MAKE) 
-	cd glx; $(MAKE)
+#	cd glx; $(MAKE)
 
 showPaged: showPaged.o $(OBJS)
 	$(CPLUSPLUS) -o $@ $(GLBL_FLAGS) showPaged.o $(OBJS) $(LINK)

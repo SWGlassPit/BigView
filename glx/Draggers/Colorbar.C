@@ -1,4 +1,5 @@
 #include <GLX.h>
+#include <stdio.h>
 #include <Draggers/Colorbar.h>
 #include <sstream>
 
