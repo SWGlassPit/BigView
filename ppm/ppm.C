@@ -13,6 +13,7 @@
 #include <unistd.h>
 #include <assert.h>
 #include <bigFile.h>
+#include <cstring>
 #include "ppm.h"
 
 using namespace std;
