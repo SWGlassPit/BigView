@@ -14,9 +14,10 @@
 
 namespace BigFile {
   typedef long long Offset;                   // 64 bit offset
-  bool seek(int fd, BigFile::Offset offset);  // go to a position
-  bool filesize(int fd, BigFile::Offset* fsize);
-  BigFile::Offset tell(int fd);               // get current position
+  bool seek(int fd, off_t offset);  // go to a position
+  bool filesize(int fd, off_t* fsize);
+//  BigFile::Offset tell(int fd);               // get current position
+  off_t tell(int fd);               // get current position
 } // namespace BigFile
 
 #endif

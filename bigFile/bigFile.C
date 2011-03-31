@@ -41,7 +41,7 @@ BigFile::tell(int fd) // give current location in file?
 }
 
 bool
-BigFile::filesize(int fd, BigFile::Offset* fsize) // return value: file nonzero size. Size stored in *fsize
+BigFile::filesize(int fd, off_t* fsize) // return value: file nonzero size. Size stored in *fsize
 {
   off_t res=0;
 //  BigFile::Offset curpos=BigFile::tell(fd);
